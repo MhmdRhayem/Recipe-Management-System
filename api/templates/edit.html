@@ -1,0 +1,89 @@
+<!-- add.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">Recipe Manager</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/" id="home-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/add" id="add-recipe-link">Add Recipe</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <h1 class="mb-4">Add New Recipe</h1>
+        <form id="recipe-form">
+            <div class="mb-3">
+                <label for="name" class="form-label">Recipe Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="ingredients" class="form-label">Ingredients</label>
+                <textarea class="form-control" id="ingredients" rows="5" required></textarea>
+                <small class="text-muted">Enter each ingredient on a new line</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="instructions" class="form-label">Instructions</label>
+                <textarea class="form-control" id="instructions" rows="5" required></textarea>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <label for="prep-time" class="form-label">Prep Time (minutes)</label>
+                    <input type="number" class="form-control" id="prep-time" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="cook-time" class="form-label">Cook Time (minutes)</label>
+                    <input type="number" class="form-control" id="cook-time" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="servings" class="form-label">Servings</label>
+                    <input type="number" class="form-control" id="servings" required>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <select class="form-control" id="status" required>
+                    <option value="favorite">favorite</option>
+                    <option value="to try">to try</option>
+                    <option value="made before">made before</option>
+
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Add Recipe</button>
+            <a href="/" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/static/js/edit.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+/* General Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Customization */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+/* Main Content Area */
+#main-content {
+    min-height: calc(100vh - 200px);
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+/* Recipe Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    background-color: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 0.5rem;
+}
+
+.card-text {
+    margin-bottom: 0.75rem;
+}
+
+.card-text strong {
+    color: #2c3e50;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 0.375rem 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+}
+
+.btn-outline-light:hover {
+    color: #3498db;
+    background-color: white;
+}
+
+/* Search Form */
+#search-form {
+    max-width: 400px;
+}
+
+#search-input {
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+    
+    #search-form {
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#recipes-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Alert Messages */
+.alert {
+    border-radius: 8px;
+}
+
+/* Recipe Details Enhancements */
+.card-text br {
+    content: "";
+    display: block;
+    margin: 0.5rem 0;
+}
+
+/* Footer (optional) */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* Loading Spinner */
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.spinner {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Recipe Card Button Enhancements */
+.recipe-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.recipe-actions .btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.recipe-actions .btn i {
+    margin-right: 0.4rem;
+}
+
+/* Edit Button */
+.recipe-actions .btn-primary {
+    background-color: #4a6bff;
+    border: none;
+}
+
+.recipe-actions .btn-primary:hover {
+    background-color: #3a5bef;
+    transform: translateY(-1px);
+}
+
+/* Delete Button */
+.recipe-actions .btn-danger {
+    background-color: #ff4757;
+    border: none;
+}
+
+.recipe-actions .btn-danger:hover {
+    background-color: #ff2d3b;
+    transform: translateY(-1px);
+}
+
+/* Button Icons */
+.recipe-actions .btn i {
+    font-size: 0.9em;
+}
